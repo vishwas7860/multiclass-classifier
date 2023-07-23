@@ -6,4 +6,3 @@ scikit-learn
 gensim
 regex
 gunicorn
-logging
