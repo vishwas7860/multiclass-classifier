@@ -1,0 +1,8 @@
+tensorflow
+flask
+joblib
+pandas
+scikit-learn
+gensim
+string
+regex
