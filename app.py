@@ -18,15 +18,11 @@ label_mapping_issue = joblib.load("label_mapping_issue.pkl")
 label_mapping_sub_issue = joblib.load("label_mapping_sub_issue.pkl")
 tokenizer = joblib.load("tokenizer.pkl")
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
-        #http://127.0.0.1:5000/predict?text=
-
-        input_text = request.args.get('text')
-
-        if not input_text:
-            return jsonify({"error": "Text parameter is missing in the URL."})
+        data = request.get_json()
+        input_text = data['text']
 
         # Tokenize and preprocess the text
         sample_sequences = tokenizer.texts_to_sequences([input_text])
