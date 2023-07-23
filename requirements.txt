@@ -7,3 +7,4 @@ gensim
 string
 regex
 gunicorn
+logging
