@@ -4,7 +4,7 @@ from flask import Flask
 
 # Set up logging (optional)
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0, "/path/to/your/app")  # Replace with the path to your Flask app
+sys.path.insert(0, "/app")  # Replace with the path to your Flask app
 
 # Load the Flask app
 app = Flask(__name__)
