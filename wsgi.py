@@ -1,9 +1,7 @@
 import sys
-import logging
 from flask import Flask
 
-# Set up logging (optional)
-logging.basicConfig(stream=sys.stderr)
+
 sys.path.insert(0, "/app")  # Replace with the path to your Flask app
 
 # Load the Flask app
